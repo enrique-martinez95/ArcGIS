@@ -1,7 +1,7 @@
 # Author: Enrique Martinez
-# This function is designed to apply the same symbology to multiple feature classes using a layer style file
-# This is similar to the batch symbology function however the data do not need to be added to the data frame first
-# The function will apply the symbology directly to the feature classes and then add them to the data frame
+# This function applies a uniform symbology to all feature classes in a target folder and adds them to a data frame.
+# This is ideal when an organization requires a consistent design language among GIS users.
+# I created a similar script while working for SeekOps Inc. to automate our symbology workflow, reducing turnaround by 80%
 
 
 # Import libraries
@@ -37,6 +37,7 @@ for root, dirs, files in os.walk(folder_path):
             apply_symbology(shapefile_path, lyrx_path)
 
 print("Feature classes succesfully symbolized")
+
 
 
 
